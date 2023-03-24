@@ -1,0 +1,20 @@
+.index{
+    background-image: url('../images/pinkbg.jpg');
+    background-size: 100%;
+}
+
+body h1{
+    font-weight: bold;
+    text-align: center;
+    font-size: 100px;
+}
+
+.wishlist{
+    background-image: url('../images/bg2.jpeg');
+    background-size: 100%;
+}
+
+.professional{
+    background-image: url('../images/bg3.jpeg');
+    background-size: 100%;
+}
