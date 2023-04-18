@@ -17,16 +17,17 @@
 
 <!-- All of the visible code in the page belongs in the body tag -->
 <body class='professional'>
-    <div class="skip"><a href="#main">Skip to Main Content</a></div>
+    <div class="skip"><a href="#prof_main">Skip to Main Content</a></div>
 	<!-- Header is a sematic tag page that aids readability -->
 	<header>
 		<!-- Nav is a sematic tag page that aids accessibility -->
 		<nav>
 			<ul>
 				<!-- Since I am on the index file I added class = action to the link to index. -->
-				<li class="active"><a href = "index.html" >About Me</a></li>
+				<li ><a href = "index.html" >About Me</a></li>
 				<li><a href = "personal.html">Wish List</a></li>
-				<li><a href = "professional.html">My Personal and Professional Interests</a></li>
+				<li class="active" ><a href = "professional.html">My Personal and Professional Interests</a></li>
+			
 			</ul>
 		</nav>
 		<!-- The h1 is a semantic tag that aids accessibility -->
@@ -34,14 +35,39 @@
 	</header>
 
 	<!-- Every page should have a main tag for accessibility -->
-	<main class="container" id = "main">
-		<p>I am majoring in Information Analysis through the School of Information and minoring in Public Policy. I am interested in studying law post
-            grad and purusing tech law! On this page I will walk you through my professional history and some of my personal interests. <br>
-            <img src="images/headshot.jpg" alt="headshot" width="250">
-    
-        </p>
-
-
+	<main class="container" id = "prof_main">
+		<div class="intro text-block">
+			<h2>Hi There!</h2>
+			<p> I am majoring in Information Analysis through the School of Information and minoring in Public Policy. I am interested in studying law post
+				grad and purusing tech law! On this page I will walk you through my professional history and some of my personal interests.</p>
+				
+		</div>
+		<div class="intro_image" id="headshot">
+			<img src="images/headshot.jpg" alt="headshot" >
+		</div>
+		<div class="last summer text-block">
+			<h2>Past Work Experience</h2>
+			<p> I have been involved in politics since high school. My first camapaign was Abdul El-Sayed's run for Michigan Governor in 2018. Since then,
+				I have worked on Congresswomen Elissa Slotkin and Haley Steven's respective campaigns for congress along with Abdullah Hammoud's hisoric run for Mayor in Dearborn. I have also dabbled 
+				in political data and served on two small North Carolina campaigns as a data specialist. For the 2022 midterm election, I was an associate for a political consulting firm in Washington D.C. and got the opportunity to work on 14 different campaigns at once.
+				Most notably, I contributed to Governor Tony Evers' big win in Wisconsin, Governor Janet Mills' win in Maine, and Congressman Andy Kim's win in New Jersey's third district.
+			</p>
+		</div>
+		<div class="SI text-block">
+			<h2>College So Far</h2>
+			<p> My interests are very diverse and I am stuyding Information Analytics because SI's approach to programming makes sense to me
+				as someone who is interested in data as a means of civic engagement that positively affects communities. Oddly enough, my curriculum in my policy minor
+				blends well with the more conceptual aspects of SI. It allows me to explore tech policy, data privacy, and has motivated me to pursue law so I can one day help shape tech policy that 
+				protects consumers and holds massive corporations responsible for ethical use of private information. 	</p>
+		</div>
+		<div class="other text-block">
+			<h2>Other interests</h2>
+			<p> Outside of school I am a writer and the business manager for <a href="https://www.gargmag.com/">The Gargoyle</a> - A humor magazine at the University of Michigan. 
+				I love comedy and writing jokes. One day I would love to perform stand up just once. My dream job second to being a lawyer is writing for a show like SNL or I Think You Should Leave. 
+				If you haven't seen ITYSL, check this <a href=https://www.google.com/search?q=stupid+hat+i+think+you+should+leave&ei=tyI7ZLfSLaSlptQPyLOk8Ak&oq=stupid+hat+i+think+&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAxgAMgUIABCABDIICAAQigUQhgMyCAgAEIoFEIYDOgsIABCABBCxAxCDAToHCAAQigUQQzoRCC4QgwEQxwEQsQMQ0QMQigU6BwguEIoFEEM6DgguEIAEELEDEMcBENEDOg0ILhCPARDqAhC0AhgBOg0IABCPARDqAhC0AhgBOgoILhCKBRDUAhBDOggIABCABBCxAzoICAAQigUQkQI6CAguEIoFEJECOhQILhCKBRCxAxCDARDHARDRAxCRAjoKCC4QigUQsQMQQzoLCAAQigUQsQMQgwE6CggAEIoFELEDEEM6BwgAEIAEEAo6CgguEIAEELEDEAo6CggAEIAEELEDEAo6DQguEIoFELEDENQCEEM6CAguEIAEELEDOgsILhCABBCxAxDUAjoFCC4QgAQ6BggAEBYQHjoICAAQFhAeEA86CAgAEBYQHhAKSgQIQRgAUABYyBhg6B1oAnAAeACAAeQBiAGZFpIBBjEuMTYuMpgBAKABAbABCsABAdoBBAgBGAo&sclient=gws-wiz-serp#fpstate=ive&vld=cid:da200200,vid:LO2k-BNySLI
+				>skit</a> out. </p>
+						
+		</div>
 	</main>
 
 	<!-- Footer is a sematic tag page that aids readability -->

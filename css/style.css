@@ -1,20 +1,111 @@
+html{
+  scroll-behavior: smooth;
+}
+
+
+.skip a {
+  position: absolute;
+  left: -9999px;
+}
+
+.skip a:focus {
+  position: static;
+}
+
+
+
 .index{
     background-image: url('../images/pinkbg.jpg');
-    background-size: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 body h1{
     font-weight: bold;
     text-align: center;
-    font-size: 100px;
+    font-size: 60px;
 }
 
 .wishlist{
     background-image: url('../images/bg2.jpeg');
-    background-size: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    
 }
 
 .professional{
     background-image: url('../images/bg3.jpeg');
-    background-size: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
+
+.gallery{
+    display:grid;
+    justify-content: center;
+    grid-template-columns: 1fr(repeat(5));
+    grid-auto-rows: 1fr;
+}
+
+
+nav ul li.active a{
+    color: black;
+    font-weight: bold;
+    /* bolds and changes color of active link */
+  }
+
+/* styling default professional page */
+#prof_main h2{
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+#prof_main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start; /* align items to the top */
+}
+
+.intro_image {
+  flex-basis: 250px; /* set width to 250px */
+}
+
+.intro_image img {
+  width: 100%;
+  height: auto;
+  max-height: 250px; /* limit height to 250px */
+}
+
+.intro text-block {
+  flex-basis: calc(100% - 250px);
+}
+
+.text-block {
+  flex-basis: calc(75% / 2 - 20px);
+  margin-bottom: 40px;
+  background-color: rgba(233, 216, 229, 0.8);
+  border: 5px solid black;
+  padding: 20px;
+  box-sizing: border-box;
+  align-self: flex-start; /* align to the top */
+}
+.text-block:nth-child(odd) {
+  clear: both;
+}
+
+/* styling default index page */
+
+
+/* styling default personal page */
+
+
+
+/* 700 px media query */
+
+
+
+
+/* 1200 px media query */
