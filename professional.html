@@ -12,6 +12,7 @@
 	<link rel="stylesheet" href="css/html5reset.css">
 	<!-- Link to the stylesheet -->
 	<link rel="stylesheet" href="css/style.css">
+	<script src="site.js"></script>
 	<title>Professional</title>
 </head>
 
@@ -20,6 +21,7 @@
     <div class="skip"><a href="#prof_main">Skip to Main Content</a></div>
 	<!-- Header is a sematic tag page that aids readability -->
 	<header>
+		<a href = "index.html" > <img src="images/logo.png" alt="initials logo" id = "logo"></a>
 		<!-- Nav is a sematic tag page that aids accessibility -->
 		<nav>
 			<ul>
@@ -31,7 +33,9 @@
 			</ul>
 		</nav>
 		<!-- The h1 is a semantic tag that aids accessibility -->
-		<h1>Professional and Personal Details</h1>
+		<h1 id="myHeading"> Professional and Personal Details</h1>
+		<button id="shadow" onclick="toggleShadows()">Toggle Shadow</button>
+		<script src="js/site.js"></script>
 	</header>
 
 	<!-- Every page should have a main tag for accessibility -->
@@ -43,7 +47,7 @@
 				
 		</div>
 		<div class="intro_image" id="headshot">
-			<img src="images/headshot.jpg" alt="headshot" >
+			<img src="images/headshot.jpg" alt="headshot" width="150" >
 		</div>
 		<div class="last summer text-block">
 			<h2>Past Work Experience</h2>
@@ -69,6 +73,7 @@
 						
 		</div>
 	</main>
+
 
 	<!-- Footer is a sematic tag page that aids readability -->
 	<footer>

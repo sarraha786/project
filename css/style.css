@@ -2,6 +2,29 @@ html{
   scroll-behavior: smooth;
 }
 
+#logo {
+  display: none; /* hide the logo by default */
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer {
+  position: absolute;
+
+  width: 100%;
+
+}
+
+body{
+  position:relative;
+  font-family: Georgia, serif;
+  
+  
+}
+
 
 .skip a {
   position: absolute;
@@ -11,8 +34,6 @@ html{
 .skip a:focus {
   position: static;
 }
-
-
 
 .index{
     background-image: url('../images/pinkbg.jpg');
@@ -24,8 +45,12 @@ html{
 body h1{
     font-weight: bold;
     text-align: center;
-    font-size: 60px;
+    font-size: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color:black;
 }
+
 
 .wishlist{
     background-image: url('../images/bg2.jpeg');
@@ -42,13 +67,28 @@ body h1{
     background-attachment: fixed;
 }
 
-.gallery{
-    display:grid;
-    justify-content: center;
-    grid-template-columns: 1fr(repeat(5));
-    grid-auto-rows: 1fr;
+/* styling default personal/wishlist page */
+
+#gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+
 }
 
+#gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .2s;
+}
+
+
+
+  
 
 nav ul li.active a{
     color: black;
@@ -56,56 +96,374 @@ nav ul li.active a{
     /* bolds and changes color of active link */
   }
 
-/* styling default professional page */
-#prof_main h2{
-    font-weight: bold;
-    padding-bottom: 5px;
-}
 
-#prof_main {
+
+
+  nav ul {
+    list-style: none;
+    margin: auto;
+    padding: 8px;
+    display: flex; /* make the menu items appear in a row */
+    justify-content:flex-start 
+
+  }
+  
+  nav li {
+    margin: 0 10px; /* add some margin around each item */
+    justify-content: flex-start;
+  }
+
+/* styling default professional page */
+
+
+.container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start; /* align items to the top */
 }
 
+/* Style for the text blocks */
+.text-block {
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(233, 216, 229, 0.8);
+  border: 5px solid black;
+  box-sizing: border-box;
+  margin-bottom: 2em;
+  margin-right: 10%;
+  margin-left:10%;
+}
+
+/* Style for the image */
 .intro_image {
-  flex-basis: 250px; /* set width to 250px */
+  width: 100%;
+  text-align: center;
+  flex: 1;
 }
 
 .intro_image img {
-  width: 100%;
+  margin-bottom: 2em;
+  max-width: 100%;
   height: auto;
-  max-height: 250px; /* limit height to 250px */
-}
-
-.intro text-block {
-  flex-basis: calc(100% - 250px);
-}
-
-.text-block {
-  flex-basis: calc(75% / 2 - 20px);
-  margin-bottom: 40px;
-  background-color: rgba(233, 216, 229, 0.8);
-  border: 5px solid black;
-  padding: 20px;
-  box-sizing: border-box;
-  align-self: flex-start; /* align to the top */
-}
-.text-block:nth-child(odd) {
-  clear: both;
 }
 
 /* styling default index page */
 
+#me {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
 
-/* styling default personal page */
+#me p {
+  padding: 10px;
+  margin: auto;
+  font-weight: bold;
+  text-align: center;
+}
+
+#me img {
+  border: 5px solid white;
+  padding: 10px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+
+#me h2{
+  size:40px;
+  padding:10px;
+  font-weight: bold;
+}
+
 
 
 
 /* 700 px media query */
+/* remove animation for logo if user wants */
+@media (prefers-reduced-motion: reduce) {
+  #logo {
+    animation: none;
+  }
+}
+@media (min-width: 700px) {
+  body{
+    font-family: Garamond, serif;
+  }
+
+  /* changing nav */
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav li {
+    margin: 10px 0;
+  }
+  /* change backgrounds */
+  .index{
+    background-image: url('../images/bg2.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+  .professional{
+  background-image: url('../images/pinkbg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+  .index{
+    background-image: url('../images/bg3.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+  }
+  /* restructure gallery grid */
+  #gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  #gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .2s;
+  }
+  
+  /* change heading shadow styling */
+
+  button {
+    margin-top: 15px;
+    margin-bottom:15px;
+  
+  }
+  #myHeading {
+    text-shadow: 0px 4px 10px rgba(245, 163, 204, 0.8);
+  }
+  body h1{
+    size: 40px;
+  }
+  /* change about structure*/
+
+  #me {
+    display: block;
+    text-align: center;
+    height: 100%;
+    padding: 20px;
+  }
+  
+  #me p {
+    padding: 10px;
+    margin: 0;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  #me img {
+    border: 5px solid white;
+    padding: 10px;
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+    margin: 10px;
+  }
+  
+  #me h2{
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0;
+  }
+  
+
+  /* change professional layout */
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .text-block {
+    width: 90%;
+    padding: 20px;
+    background-color: rgba(233, 216, 229, 0.8);
+    border: 5px solid black;
+    box-sizing: border-box;
+    margin-bottom: 2em;
+  }
+  
+  .intro_image {
+    width: 90%;
+    text-align: center;
+    flex: 1;
+  }
+  
+  .intro_image img {
+    margin-bottom: 1em;
+    max-width: 100%;
+    height: auto;
+  }
+  
+
+}
+
+@media (min-width: 1200px) {
+
+  /* adding logo */
+  #logo {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    opacity: 0;
+    animation: grow-logo 5s forwards;
+  }
+  
+  @keyframes grow-logo {
+    from {
+      width: 10px;
+      opacity: 0;
+    }
+    to {
+      width: 150px;
+      opacity: 1;
+    }
+  }
+  /*change bg styling */
+  .index,.professional,.personal{
+    background-image: url('../images/bg2.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+  /* change nav */
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    margin: 0 15px; /* increase the margin around each item */
+    font-size: 1.2rem; /* increase the font size of the menu items */
+  
+  }
+  nav {
+    outline: 2px solid white;
+    padding:3px;
+    
+  }
+
+  /* change heading styling */
+  body h1{
+    size: 80px;
+  }
+  #myHeading {
+    text-shadow: 0px 4px 10px rgba(232, 0, 170, 0.8);
+  }
+  /* change gallery structure*/
+  #gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Changed grid-template-columns to make the images responsive */
+    grid-auto-rows: minmax(200px, auto); /* Added grid-auto-rows to allow the images to have variable height */
+    grid-gap: 20px;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  #gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .2s;
+  }
+  
+  #gallery img:hover {
+    transform: scale(1.1);
+  }
+  
+  /* change about structure*/
+  #me {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 20px;
+  }
+  
+  #me p {
+    padding: 10px;
+    margin: 0;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  #me img {
+    border: 5px solid white;
+    padding: 10px;
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+    margin: 20px;
+    flex-grow: 1;
+  }
+  
+  #me h2{
+    font-size: 32px;
+    font-weight: bold;
+    margin: 40px 0;
+    text-align: center;
+  }
+  
+  /* change professional layout */
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 20px;
+  }
+  
+  .text-block:first-of-type {
+    grid-row: 1;
+  }
+  
+  .intro_image {
+    grid-row: 1 ;
+  }
+  
+  .text-block {
+    padding: 20px;
+    background-color: rgba(233, 216, 229, 0.8);
+    border: 5px solid black;
+    box-sizing: border-box;
+    margin:auto;
+  }
+    
+  .intro_image img {
+    margin-bottom: 1em;
+    width: 60%;
+    border:2px solid black;
+    height:500px
+  }
+  
+  
+  
+  
+
+
+}
 
 
 
-
-/* 1200 px media query */

@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/html5reset.css">
 	<!-- Link to the stylesheet -->
 	<link rel="stylesheet" href="css/style.css">
+	<script src="site.js"></script>
 	<title>About Me</title>
 </head>
 
@@ -20,6 +21,7 @@
     <div class="skip"><a href="#me">Skip to Main Content</a></div>
 	<!-- Header is a sematic tag page that aids readability -->
 	<header>
+		<a href = "index.html" > <img src="images/logo.png" alt="initials logo" id = "logo"></a>
 		<!-- Nav is a sematic tag page that aids accessibility -->
 		<nav>
 			<ul>
@@ -30,12 +32,14 @@
 			</ul>
 		</nav>
 		<!-- The h1 is a semantic tag that aids accessibility -->
-		<h1>Sarrah Ahmed</h1>
+		<h1 id="myHeading">Sarrah Ahmed</h1>
+		<button id="shadow" onclick="toggleShadows()">Toggle Shadow</button>
+		<script src="js/site.js"></script>
 	</header>
 
 	<!-- Every page should have a main tag for accessibility -->
-	<main class="container" id = "me">
-        <h2>My Life in Pictures</h2>
+	<main class="flex_idx" id = "me">
+        <h2> Pictures</h2>
 		<p>My name is Sarrah Ahmed. I  am from Rochester Hills, MI  and I am 20 years old <br>
             
             <img src = "images/me.jpeg" alt="me!" width="250" >
